@@ -1,0 +1,6 @@
+flohive-cache.json
+*.env
+*.key
+*.pem
+__pycache__/
+node_modules/
