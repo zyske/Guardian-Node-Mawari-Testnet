@@ -19,53 +19,51 @@ Follow the simple steps below 👇
 
 ---
 
-## ⚙️ Run Mawari Guardian Node on VPS
+### ⚙️ Run Mawari Guardian Node on VPS
 
 ### 1️⃣ Update the System
-\`\`\`bash
+```bash
 sudo apt update && sudo apt upgrade -y
-\`\`\`
+```
 
 ### 2️⃣ Install Docker
 ```bash
 sudo apt install docker.io -y
 ```
 ### 3️⃣ Enable and Start Docker Service
-\`\`\`bash
+```bash
 sudo systemctl enable docker
 sudo systemctl start docker
-\`\`\`
+```
 
 ### 4️⃣ Add User to Docker Group
-\`\`\`bash
+```bash
 sudo usermod -aG docker \$USER
-\`\`\`
+```
 
 ### 5️⃣ Run Mawari Node
-\`\`\`bash
+```bash
 mkdir -p ~/mawari && \
 docker run --pull always -d \
   --name mawari-guardian \
   -v ~/mawari:/app/cache \
   -e OWNERS_ALLOWLIST=YourWalletAddress \
   us-east4-docker.pkg.dev/mawarinetwork-dev/mwr-net-d-car-uses4-public-docker-registry-e62e/mawari-node:latest
-\`\`\`
-
-> 📝 Replace \`YourWalletAddress\` with your **own wallet address**.
+```
+> Replace \`YourWalletAddress\` with your **own wallet address**.
 
 ---
 
 ### 6️⃣ Check Logs
-\`\`\`bash
+```bash
 docker logs -f mawari-guardian
-\`\`\`
+```
 
 ### 7️⃣ Get Your Burner Address
-\`\`\`bash
+```bash
 sudo cat ~/mawari/flohive-cache.json | grep -i "address"
 sudo cat ~/mawari/flohive-cache.json | grep -i "privateKey"
-\`\`\`
-
+```
 > ⚠️ **Never share your private key.** Only use the \`Burner Address\` for delegation.
 
 ---
@@ -82,30 +80,30 @@ sudo cat ~/mawari/flohive-cache.json | grep -i "privateKey"
 ## 🔁 Helper Commands
 
 **Check all logs**
-\`\`\`bash
+```bash
 docker logs -f mawari-guardian
-\`\`\`
+```
 
 **Check active containers**
-\`\`\`bash
+```bash
 docker ps -a
-\`\`\`
+```
 
 **Restart container (keep Burner Address)**
-\`\`\`bash
+```bash
 sudo docker restart mawari-guardian
-\`\`\`
+```
 
 **Stop & remove container (keep Burner Address)**
-\`\`\`bash
+```bash
 sudo docker stop mawari-guardian
 sudo docker rm mawari-guardian
-\`\`\`
+```
 
 **Delete cache folder (removes Burner Address)**
-\`\`\`bash
+```bash
 sudo rm -rf ~/mawari
-\`\`\`
+```
 
 ---
 
