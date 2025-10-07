@@ -1,4 +1,3 @@
-cat <<'EOF' > README.md
 # 🚀 Mawari Guardian Node — Testnet Setup Guide
 
 Run your **Mawari Guardian Node** on a VPS and join the decentralized network!  
@@ -28,10 +27,9 @@ sudo apt update && sudo apt upgrade -y
 \`\`\`
 
 ### 2️⃣ Install Docker
-\`\`\`bash
+```bash
 sudo apt install docker.io -y
-\`\`\`
-
+```
 ### 3️⃣ Enable and Start Docker Service
 \`\`\`bash
 sudo systemctl enable docker
