@@ -21,16 +21,16 @@ Follow the simple steps below 👇
 
 ### ⚙️ Run Mawari Guardian Node on VPS
 
-### 1️⃣ Update the System
+## 1️⃣ Update the System
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
-### 2️⃣ Install Docker
+## 2️⃣ Install Docker
 ```bash
 sudo apt install docker.io -y
 ```
-### 3️⃣ Enable and Start Docker Service
+## 3️⃣ Enable and Start Docker Service
 ```bash
 sudo systemctl enable docker
 sudo systemctl start docker
@@ -41,7 +41,7 @@ sudo systemctl start docker
 sudo usermod -aG docker \$USER
 ```
 
-### 5️⃣ Run Mawari Node
+## 5️⃣ Run Mawari Node
 ```bash
 mkdir -p ~/mawari && \
 docker run --pull always -d \
@@ -54,17 +54,17 @@ docker run --pull always -d \
 
 ---
 
-### 6️⃣ Check Logs
+## 6️⃣ Check Logs
 ```bash
 docker logs -f mawari-guardian
 ```
 
-### 7️⃣ Get Your Burner Address
+## 7️⃣ Get Your Burner Address
 ```bash
 sudo cat ~/mawari/flohive-cache.json | grep -i "address"
 sudo cat ~/mawari/flohive-cache.json | grep -i "privateKey"
 ```
-> ⚠️ **Never share your private key.** Only use the \`Burner Address\` for delegation.
+> ⚠️ **Never share your private key.** Only use the `\Burner Address\` for delegation.
 
 ---
 
@@ -73,11 +73,11 @@ sudo cat ~/mawari/flohive-cache.json | grep -i "privateKey"
 - Mint **3 Guardian NFTs** using **Metamask**  
 - Delegate them to your **Burner Address**
 
-### 9️⃣ Send 1 MAWARI Token to Your Burner Address
+## 9️⃣ Send 1 MAWARI Token to Your Burner Address
 
 ---
 
-## 🔁 Helper Commands
+### 🔁 Helper Commands
 
 **Check all logs**
 ```bash
