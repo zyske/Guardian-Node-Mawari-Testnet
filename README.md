@@ -36,7 +36,7 @@ sudo systemctl enable docker
 sudo systemctl start docker
 ```
 
-### 4️⃣ Add User to Docker Group
+## 4️⃣ Add User to Docker Group
 ```bash
 sudo usermod -aG docker \$USER
 ```
@@ -68,7 +68,7 @@ sudo cat ~/mawari/flohive-cache.json | grep -i "privateKey"
 
 ---
 
-### 8️⃣ Delegate Your Guardian NFTs
+## 8️⃣ Delegate Your Guardian NFTs
 - Go to [testnet.mawari.net/mint](https://testnet.mawari.net/mint)  
 - Mint **3 Guardian NFTs** using **Metamask**  
 - Delegate them to your **Burner Address**
